@@ -3,6 +3,7 @@
 namespace iBrand\Upload;
 
 use iBrand\Upload\Checkers\ImageChecker;
+use iBrand\Upload\Checkers\PdfChecker;
 use iBrand\Upload\Checkers\VideoChecker;
 use iBrand\Upload\Checkers\VoiceChecker;
 use Illuminate\Support\ServiceProvider;
@@ -38,6 +39,7 @@ class UploadServiceProvider extends ServiceProvider
         $this->app->alias(ImageChecker::class, ImageChecker::TYPE);
         $this->app->alias(VideoChecker::class, VideoChecker::TYPE);
         $this->app->alias(VoiceChecker::class, VoiceChecker::TYPE);
+        $this->app->alias(PdfChecker::class, PdfChecker::TYPE);
     }
 
     public function map()
